@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            color: #374151;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .header {
+            background-color: #2563eb;
+            color: #ffffff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .content {
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .content p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            color: #4b5563;
+        }
+        .otp-box {
+            display: inline-block;
+            background-color: #f3f4f6;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1d4ed8;
+            letter-spacing: 5px;
+            margin-bottom: 24px;
+            border: 2px dashed #93c5fd;
+        }
+        .footer {
+            background-color: #f9fafb;
+            padding: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #6b7280;
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1 th:text="${title}">Xác thực tài khoản</h1>
+        </div>
+        <div class="content">
+            <p>Chào bạn,</p>
+            <p th:text="${message}">Mã OTP của bạn là:</p>
+            <div class="otp-box" th:text="${otpCode}">123456</div>
+            <p>Mã này có hiệu lực trong <strong th:text="${duration}">5</strong> phút. Vui lòng không chia sẻ mã này cho bất kỳ ai.</p>
+        </div>
+        <div class="footer">
+            <p>Trân trọng,<br>Đội ngũ Ramen LMS</p>
+            <p>© 2026 Ramen LMS. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

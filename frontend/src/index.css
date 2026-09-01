@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-leetgray-900: #1A1A1A;
+  --color-leetgray-800: #282828;
+  --color-leetgray-700: #3E3E3E;
+  --color-leetaccent: #FFA116;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* Base styles for dark mode */
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #1A1A1A;
+    background-color: #F9FAFB;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+  
+  .dark body {
+    color: #F3F4F6;
+    background-color: var(--color-leetgray-900);
+  }
+}

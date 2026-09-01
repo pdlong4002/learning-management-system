@@ -1,0 +1,51 @@
+# ======= IDE & OS =======
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+Thumbs.db
+*.log
+
+# ======= Backend (Spring Boot) =======
+backend/target/
+backend/logs/
+backend/build/
+
+# ======= Frontend (React Vite) =======
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.eslintcache
+frontend/coverage/
+
+# ======= Environment Variables =======
+.env
+*.env
+backend/.env
+frontend/.env
+
+# ======= Personal Notes & Drafts =======
+/*.md
+!/README.md
+
+# ======= LaTeX (CV) =======
+cv-latex/*.aux
+cv-latex/*.bbl
+cv-latex/*.blg
+cv-latex/*.brf
+cv-latex/*.fdb_latexmk
+cv-latex/*.fls
+cv-latex/*.idx
+cv-latex/*.ilg
+cv-latex/*.ind
+cv-latex/*.lof
+cv-latex/*.log
+cv-latex/*.lot
+cv-latex/*.nav
+cv-latex/*.out
+cv-latex/*.snm
+cv-latex/*.synctex.gz
+cv-latex/*.toc
+cv-latex/*.xdv

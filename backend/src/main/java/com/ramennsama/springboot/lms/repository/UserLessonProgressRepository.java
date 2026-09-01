@@ -1,0 +1,14 @@
+package com.ramennsama.springboot.lms.repository;
+
+import com.ramennsama.springboot.lms.entity.UserLessonProgress;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface UserLessonProgressRepository extends JpaRepository<UserLessonProgress, Long> {
+    Optional<UserLessonProgress> findByUserIdAndLessonId(Long userId, Long lessonId);
+    List<UserLessonProgress> findByUserIdAndLesson_Section_CourseId(Long userId, Long courseId);
+}
