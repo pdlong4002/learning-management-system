@@ -30,22 +30,6 @@ frontend/.env
 /*.md
 !/README.md
 
-# ======= LaTeX (CV) =======
-cv-latex/*.aux
-cv-latex/*.bbl
-cv-latex/*.blg
-cv-latex/*.brf
-cv-latex/*.fdb_latexmk
-cv-latex/*.fls
-cv-latex/*.idx
-cv-latex/*.ilg
-cv-latex/*.ind
-cv-latex/*.lof
-cv-latex/*.log
-cv-latex/*.lot
-cv-latex/*.nav
-cv-latex/*.out
-cv-latex/*.snm
-cv-latex/*.synctex.gz
-cv-latex/*.toc
-cv-latex/*.xdv
+# ======= Personal Folders =======
+cv-latex/
+interview/
